@@ -39,7 +39,7 @@ namespace MockServer
             {
                 app.UseHsts();
             }
-            app.UseWelcomePage();
+            //app.UseWelcomePage();
             app.UseHttpsRedirection();
             app.UseMvc();
         }
