@@ -40,6 +40,10 @@ namespace MockServer
                 app.UseHsts();
             }
             //app.UseWelcomePage();
+            app.UseCors(builder=>builder.AllowAnyHeader()
+                                        .AllowAnyOrigin()
+                                        .AllowCredentials()
+                                        .AllowAnyMethod());
             app.UseHttpsRedirection();
             app.UseMvc();
         }
